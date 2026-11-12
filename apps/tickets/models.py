@@ -89,7 +89,7 @@ class Attachment(models.Model):
     ticket = models.ForeignKey(
         Ticket, on_delete=models.CASCADE, related_name="attachments"
     )
-    # Lưu URL CDN/S3 hoặc đổi thành models.FileField(upload_to="attachments/") nếu upload trực tiếp
+
     url = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
 
